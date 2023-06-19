@@ -72,7 +72,7 @@ while [ $i -lt $n ]; do
     $($PSQL "insert into teams values(DEFAULT,'${opponent}')")
     w_id=$($PSQL "select team_id from teams where name='${winner}'")
     o_id=$($PSQL "select team_id from teams where name='${opponent}'")
-    $($PSQL "insert into games values(DEFAULT,$year,'${round}',$w_id,$o_id,$winner_goals,$opponent_goals)")
+    $($PSQL "insert into games values(DEFAULT,$year,$w_id,$o_id,$winner_goals,$opponent_goals,'${round}')")
     year=""
     round=""
     winner=""
