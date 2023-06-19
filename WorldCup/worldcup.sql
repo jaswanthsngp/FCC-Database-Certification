@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.15 (Ubuntu 12.15-0ubuntu0.20.04.1)
--- Dumped by pg_dump version 12.15 (Ubuntu 12.15-0ubuntu0.20.04.1)
+-- Dumped from database version 12.9 (Ubuntu 12.9-2.pgdg20.04+1)
+-- Dumped by pg_dump version 12.9 (Ubuntu 12.9-2.pgdg20.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,11 +50,11 @@ SET default_table_access_method = heap;
 CREATE TABLE public.games (
     game_id integer NOT NULL,
     year integer NOT NULL,
-    round character varying(15) NOT NULL,
     winner_id integer NOT NULL,
     opponent_id integer NOT NULL,
     winner_goals integer NOT NULL,
-    opponent_goals integer NOT NULL
+    opponent_goals integer NOT NULL,
+    round character varying(60) NOT NULL
 );
 
 
